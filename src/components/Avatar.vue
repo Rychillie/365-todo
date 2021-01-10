@@ -1,12 +1,12 @@
 <template>
   <div class="avatar" :class="{ avatar__selected: !!selected }">
     <div class="avatar_face">
-      <img src="../assets/rychillie.png" alt="profile picture" />
+      <img src="../assets/rychillie.png" />
     </div>
-    <h2 class="avatar_name">Hello, Rychillie</h2>
+    <h2 class="avatar_name">Hello, Rychillie.</h2>
     <p class="avatar_tips">
       Looks like feed good.<br />You have {{ todayTasks.length }} tasks to do
-      today
+      today.
     </p>
     <p class="avatar_date">TODAY : {{ today | dateString }}</p>
   </div>
@@ -42,6 +42,7 @@ export default {
   height: 300px;
   justify-content: flex-end;
   flex-direction: column;
+  transition: all 0.5s ease;
 }
 .avatar__selected {
   transform: translate3d(0, 20px, 0);
@@ -53,7 +54,6 @@ export default {
   border-radius: 100%;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
   img {
     display: block;
     width: 100%;
@@ -73,7 +73,7 @@ export default {
   font-size: 13px;
   font-weight: 100;
   opacity: 0.8;
-  line-height: 1.6rem;
+  line-height: 1.6em;
 }
 .avatar_date {
   margin-top: 44px;

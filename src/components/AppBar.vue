@@ -1,11 +1,11 @@
 <template>
   <div class="app-bar">
     <span class="app-bar_l" @click="$emit('left')">
-      <i :class="['fas', `fa-${left}`]"></i>
+      <i :class="['fa', `fa-${left}`]"></i>
     </span>
     <h1>{{ title }}</h1>
     <span class="app-bar_r" @click="$emit('right')">
-      <i :class="['fas', `fa-${right}`]"></i>
+      <i :class="['fa', `fa-${right}`]"></i>
     </span>
   </div>
 </template>
